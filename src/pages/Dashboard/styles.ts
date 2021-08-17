@@ -52,9 +52,12 @@ export const Container = styled.main`
     }
 
     button {
-      margin: 2rem 0;
+      margin: 2rem 0 0 0;
       margin-left: auto;
-
     }
+  }
+
+  ul {
+      list-style: none;
   }
 `

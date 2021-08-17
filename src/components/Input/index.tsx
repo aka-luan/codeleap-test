@@ -1,13 +1,17 @@
-import React, {InputHTMLAttributes} from 'react'
+import React, { InputHTMLAttributes } from 'react'
 import { Container } from './styles'
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
+
 
 const Input: React.FC<InputProps> = ({
   ...rest
-}) => (
-  <Container {...rest}/>
-)
+}) => {
 
+
+  return (
+    <Container {...rest} />
+  )
+}
 export default Input

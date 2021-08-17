@@ -1,5 +1,4 @@
-import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import { SignUp } from './pages/SignUp'
 import { Dashboard } from './pages/Dashboard'
@@ -10,8 +9,11 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Route path="/signup" component={SignUp}/>
-        <Route path="/dashboard" component={Dashboard}/>
+        <Switch>
+          <Route path="/signup" component={SignUp}/>
+          <Route path="/dashboard" component={Dashboard}/>
+        </Switch>
+        
         <GlobalStyle />
       </div>
     </Router>

@@ -9,6 +9,7 @@ export const Container = styled.button<ContainerProps>`
     width: 6rem;
     border: 1px solid var(--black);
     font-weight: bold;
+    float: right;
     background: ${(props) => props.primary? "var(--black)" : "var(--shape)"};
     color: ${(props) => props.primary? "var(--shape)" : "var(--black)"};
 
@@ -17,6 +18,8 @@ export const Container = styled.button<ContainerProps>`
     }
 
     &:disabled {
-      background: grey;
+      border: 1px solid #999999;
+      background-color: var(--border);
+      color: var(--gray);
     }
 `;

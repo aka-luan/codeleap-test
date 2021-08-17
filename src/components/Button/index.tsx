@@ -1,19 +1,20 @@
-import React from 'react'
+import React, { ButtonHTMLAttributes } from 'react'
 import { Container } from './styles'
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   primary?: boolean
 }
 
 const Button: React.FC<ButtonProps> = ({
   primary,
-  children
+  children,
+  ...rest
 }) => (
   primary ? 
-  <Container primary >
+  <Container primary  {...rest}>
   {children} 
  </Container> : 
- <Container >
+ <Container {...rest}>
    {children} 
   </Container>
 )
